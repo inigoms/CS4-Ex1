@@ -1,0 +1,21 @@
+public class Instrument{
+	static double range;
+	static String type;
+	static String color;
+
+	public Instrument(double r, String i, String g){
+		range = r;
+		type = i;
+		color = g;
+	}
+
+	public static int getRange(){
+		return range;
+	}
+	public static String getType(){
+		return type;
+	}
+	public static String getColor(){
+		return color;
+	}
+}
