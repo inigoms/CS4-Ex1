@@ -17,18 +17,30 @@ class Main {
 		System.out.println("   Type: " + recorder.getIType());
 		System.out.println("");
 		System.out.println("Singer Name: " + Andreas.getName());
-		System.out.println("No of Performances: " + Andreas.getNoOfPerformances());
+		System.out.println("Total no. of Performances: " + Andreas.getTotalPerformances());
 		System.out.println("Earnings: " + Andreas.getEarnings());
-		System.out.println("Favorite Song Title: " + Andreas.getFavoriteSong().title);
-		System.out.println("   Duration: " + Andreas.getFavoriteSong().duration + " min");
-		System.out.println("   Year composed: " + Andreas.getFavoriteSong().yearComposed);
+		System.out.println("Favorite Song Title: " + Andreas.getFavoriteSong().getTitle());
+		System.out.println("   Duration: " + Andreas.getFavoriteSong().getDuration() + " min");
+		System.out.println("   Year composed: " + Andreas.getFavoriteSong().getYearComposed());
 		System.out.println("");
 		Andreas.performForAudience(12);
 		Andreas.changeFavSong(piece2);
-		System.out.println("No of Performances: " + Andreas.getNoOfPerformances());
+		System.out.println("Total No. of Performances: " + Andreas.getTotalPerformances());
 		System.out.println("Earnings: " + Andreas.getEarnings());
-		System.out.println("Favorite Song Title: " + Andreas.getFavoriteSong().title);
-		System.out.println("   Duration: " + Andreas.getFavoriteSong().duration + " min");
-		System.out.println("   Year composed: " + Andreas.getFavoriteSong().yearComposed);
+		System.out.println("Favorite Song Title: " + Andreas.getFavoriteSong().getTitle());
+		System.out.println("   Duration: " + Andreas.getFavoriteSong().getDuration() + " min");
+		System.out.println("   Year composed: " + Andreas.getFavoriteSong().getYearComposed());
+		System.out.println("");
+		Andreas.performForAudience(12, 2); // 2 singers
+		System.out.println("Total No. of Performances: " + Andreas.getTotalPerformances());
+		System.out.println("Earnings (2 singers): " + Andreas.getEarnings());
+		System.out.println("");
+		Andreas.performForAudience(12, 2); // 2 singers
+		System.out.println("Total No. of Performances: " + Andreas.getTotalPerformances());
+		System.out.println("Earnings (2 singers): " + Andreas.getEarnings());
+		System.out.println("");
+		Andreas.performForAudience(12);
+		System.out.println("Total No. of Performances: " + Andreas.getTotalPerformances());
+		System.out.println("Earnings: " + Andreas.getEarnings());
 	}
 }
