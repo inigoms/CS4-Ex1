@@ -1,12 +1,18 @@
 public class Singer{
-	String name;
-	int noOfPerformances;
-	double earnings;
-	Song favoriteSong;
+	private String name;
+
+	private static int totalPerformances;
+	private double earnings;
+	private Song favoriteSong;
 
 	public void performForAudience(int noOfPeople){
-		noOfPerformances += noOfPeople;
+		totalPerformances += 1;
 		earnings += noOfPeople * 100;
+	}
+
+	public void performForAudience(int noOfPeople, int noOfSingers){
+		totalPerformances += 1;
+		earnings += (noOfPeople * 100) / noOfSingers;
 	}
 
 	public void changeFavSong(Song c){
@@ -15,7 +21,7 @@ public class Singer{
 
 	public Singer(String n, int p, double e, Song f){
 		name = n;
-		noOfPerformances = p;
+		totalPerformances = p;
 		earnings = e;
 		favoriteSong = f;
 	}
@@ -24,8 +30,8 @@ public class Singer{
 		return name;
 	}
 	
-	public int getNoOfPerformances(){
-		return noOfPerformances;
+	public int getTotalPerformances(){
+		return totalPerformances;
 	}
 	
 	public double getEarnings(){
